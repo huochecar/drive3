@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>欢迎来到动物城</h3>
+
+    <ul>
+        {% for animal in animals %}
+        <li>{{ animal.name }},{{animal.age }}</li>
+
+        {% endfor %}
+    </ul>
+</body>
+</html>
