@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <h3>欢迎来到动物城</h3>
+{% extends 'base.html'%}
 
-    <ul>
-        {% for animal in animals %}
-        <li>{{ animal.name }},{{animal.age }}</li>
+    {%block body%}
+        <div class="jumbotron">
+          <h1>欢迎来到动物城</h1>
+          <p>...</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">更多动物正在路上</a></p>
+        </div>
+    {%endblock%}
 
-        {% endfor %}
-    </ul>
-</body>
-</html>
+    {%block content%}
+        <ul>
+            {% for animal in animals %}
+            <li>{{ animal.name }},{{animal.age }}</li>
+
+            {% endfor %}
+        </ul>
+    {%endblock%}
+
+
